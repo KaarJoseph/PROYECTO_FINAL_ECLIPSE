@@ -90,9 +90,10 @@ public class DatosDemo {
 	     detalle1.setCosto(20.0);
 	     detalle1.setEspacio(espacio1);
 	     detalle1.setVehiculo(vehiculo1);
+	     detalle1.setCabecera(cabecera1);
 	     daoDetalle.insert(detalle1); // Reemplaza daoDetalle con el nombre correcto de tu DAO para Detalle
 	
-	     cabecera1.addDetalle(detalle1);
+	     //cabecera1.addDetalle(detalle1);
 	
 	     // Persistir el objeto Detalle antes de asociarlo a la cabecera
 	     Detalle detalle2 = new Detalle();
@@ -102,9 +103,10 @@ public class DatosDemo {
 	     detalle2.setCosto(30.0);
 	     detalle2.setEspacio(espacio1);
 	     detalle2.setVehiculo(vehiculo1);
+	     detalle2.setCabecera(cabecera1);
 	     daoDetalle.insert(detalle2); // Reemplaza daoDetalle con el nombre correcto de tu DAO para Detalle
 	
-	     cabecera1.addDetalle(detalle2);
+	     //cabecera1.addDetalle(detalle2);
 	
 	     daoCabecera.insert(cabecera1);
 

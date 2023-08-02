@@ -10,7 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Transient;
 
 @Entity
-public class Detalle implements Serializable {
+public class Detalle{
 
     @Id
     private int detalleId;

@@ -10,7 +10,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
 
 @Entity
-public class Espacio implements Serializable {
+public class Espacio{
 
     @Id
     private int espacioId;
@@ -18,8 +18,8 @@ public class Espacio implements Serializable {
     private String estado;
     private double costo;
 
-    @OneToMany(mappedBy = "espacio")
-    private List<Detalle> detalles;
+    /*@OneToMany(mappedBy = "espacio")
+    private List<Detalle> detalles;*/
 
     public int getEspacioId() {
         return espacioId;
@@ -53,13 +53,13 @@ public class Espacio implements Serializable {
         this.costo = costo;
     }
 
-    public List<Detalle> getDetalles() {
+    /*public List<Detalle> getDetalles() {
         return detalles;
     }
 
     public void setDetalles(List<Detalle> detalles) {
         this.detalles = detalles;
-    }
+    }*/
 
     @Override
     public String toString() {

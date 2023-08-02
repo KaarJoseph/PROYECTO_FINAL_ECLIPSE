@@ -9,18 +9,19 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
 
 @Entity
-public class Persona implements Serializable {
+public class Persona{
 
     @Id
     private String cedula;
     private String nombre;
     private String direccion;
     
-    @OneToMany(mappedBy = "propietario")
+    
+    /*@OneToMany(mappedBy = "propietario")
     private List<Vehiculo> vehiculos;
     
     @OneToMany(mappedBy = "propietarioCabecera")
-    private List<Cabecera> cabeceras;
+    private List<Cabecera> cabeceras;*/
     
     public String getCedula() {
         return cedula;
@@ -46,7 +47,7 @@ public class Persona implements Serializable {
         this.direccion = direccion;
     }
 
-    public List<Vehiculo> getVehiculos() {
+    /*public List<Vehiculo> getVehiculos() {
         return vehiculos;
     }
 
@@ -60,7 +61,7 @@ public class Persona implements Serializable {
 
     public void setCabeceras(List<Cabecera> cabeceras) {
         this.cabeceras = cabeceras;
-    }
+    }*/
 
     @Override
     public String toString() {

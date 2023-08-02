@@ -13,7 +13,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Transient;
 
 @Entity
-public class Cabecera implements Serializable {
+public class Cabecera{
 
     @Id
     private int ticketInt;
@@ -25,9 +25,10 @@ public class Cabecera implements Serializable {
     @ManyToOne
     private Persona propietarioCabecera;
     
+    /*
     @OneToMany(mappedBy = "cabecera", cascade = CascadeType.PERSIST)
     private List<Detalle> detalles;
-
+*/
 
     public int getTicketInt() {
         return ticketInt;
@@ -77,7 +78,7 @@ public class Cabecera implements Serializable {
         this.propietarioCabecera = propietarioCabecera;
     }
 
-    public List<Detalle> getDetalles() {
+    /*public List<Detalle> getDetalles() {
         return detalles;
     }
 
@@ -91,7 +92,7 @@ public class Cabecera implements Serializable {
         }
         detalles.add(detalle);
         detalle.setCabecera(this); // Establecer la relación bidireccional
-    }
+    }*/
 
 
 
