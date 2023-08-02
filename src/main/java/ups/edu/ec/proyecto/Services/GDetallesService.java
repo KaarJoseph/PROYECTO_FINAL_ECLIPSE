@@ -46,7 +46,7 @@ public class GDetallesService {
 	}
 	
 	@DELETE
-	@Path("{detalleId}")
+	@Path("elim/{detalleId}")
 	public Response eliminarDetalle(@PathParam("detalleId") int detalleId) {
 		try {
 			gestionDetalles.eliminarDetalle(detalleId);

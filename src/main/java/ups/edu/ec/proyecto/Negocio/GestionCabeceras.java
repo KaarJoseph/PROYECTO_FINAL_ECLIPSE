@@ -23,9 +23,7 @@ public class GestionCabeceras {
 		if (cabecera.getCostoTotal() <= 0) {
 			throw new Exception("El costo total debe ser un valor positivo.");
 		}
-		
-		// Aquí puedes agregar más validaciones según tus requerimientos.
-		
+				
 		// Verificamos si la cabecera ya existe en la base de datos.
 		if (daoCabecera.read(cabecera.getTicketInt()) == null) {
 			try {

@@ -7,63 +7,63 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
 
 @Entity
 public class Espacio implements Serializable {
 
-	@Id
-	//@GeneratedValue
+    @Id
     private int espacioId;
     private int numEspacio;
     private String estado;
     private double costo;
-    
+
     @OneToMany(mappedBy = "espacio")
     private List<Detalle> detalles;
 
-	public int getEspacioId() {
-		return espacioId;
-	}
+    public int getEspacioId() {
+        return espacioId;
+    }
 
-	public void setEspacioId(int espacioId) {
-		this.espacioId = espacioId;
-	}
+    public void setEspacioId(int espacioId) {
+        this.espacioId = espacioId;
+    }
 
-	public int getNumEspacio() {
-		return numEspacio;
-	}
+    public int getNumEspacio() {
+        return numEspacio;
+    }
 
-	public void setNumEspacio(int numEspacio) {
-		this.numEspacio = numEspacio;
-	}
+    public void setNumEspacio(int numEspacio) {
+        this.numEspacio = numEspacio;
+    }
 
-	public String getEstado() {
-		return estado;
-	}
+    public String getEstado() {
+        return estado;
+    }
 
-	public void setEstado(String estado) {
-		this.estado = estado;
-	}
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
 
-	public double getCosto() {
-		return costo;
-	}
+    public double getCosto() {
+        return costo;
+    }
 
-	public void setCosto(double costo) {
-		this.costo = costo;
-	}
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
 
-	public List<Detalle> getDetalles() {
-		return detalles;
-	}
+    public List<Detalle> getDetalles() {
+        return detalles;
+    }
 
-	public void setDetalles(List<Detalle> detalles) {
-		this.detalles = detalles;
-	}
-	
-	@Override
-	public String toString() {
-		return "Espacio [codigo=" + espacioId + ", Numero=" + numEspacio + ", Estado=" + estado + ", costo=" + costo + "]";
-	}
+    public void setDetalles(List<Detalle> detalles) {
+        this.detalles = detalles;
+    }
+
+    @Override
+    public String toString() {
+        return "Espacio [codigo=" + espacioId + ", Numero=" + numEspacio + ", Estado=" + estado + ", costo=" + costo
+                + "]";
+    }
 }
-

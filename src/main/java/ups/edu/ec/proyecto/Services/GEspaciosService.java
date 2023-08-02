@@ -46,7 +46,7 @@ public class GEspaciosService {
     }
 
     @DELETE
-    @Path("{espacioId}")
+    @Path("elim/{espacioId}")
     public Response eliminarEspacio(@PathParam("espacioId") int espacioId) {
         gestionEspacios.eliminarEspacio(espacioId);
         return Response.status(Response.Status.OK).build();

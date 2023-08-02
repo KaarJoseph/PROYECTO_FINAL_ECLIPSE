@@ -46,7 +46,7 @@ public class GCabecerasService {
     }
 
     @DELETE
-    @Path("{cabeceraId}")
+    @Path("elim/{cabeceraId}")
     public Response eliminarCabecera(@PathParam("cabeceraId") int cabeceraId) {
         gestionCabeceras.eliminarCabecera(cabeceraId);
         return Response.status(Response.Status.OK).build();

@@ -7,74 +7,85 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Transient;
 
 @Entity
 public class Detalle implements Serializable {
 
-	@Id
-	//@GeneratedValue
-	private int detalleId;
-	private Timestamp fechaIngreso;
-	private Timestamp fechaSalida;
-	private double costo;
-	
-	@ManyToOne
-	private Espacio espacio;
-	
-	@ManyToOne
-	private Cabecera cabecera;
+    @Id
+    private int detalleId;
+    private Timestamp fechaIngreso;
+    private Timestamp fechaSalida;
+    private double costo;
 
-	public int getDetalleId() {
-		return detalleId;
-	}
+    @ManyToOne
+    private Vehiculo vehiculo;
 
-	public void setDetalleId(int detalleId) {
-		this.detalleId = detalleId;
-	}
+    @ManyToOne
+    private Espacio espacio;
 
-	public Timestamp getFechaIngreso() {
-		return fechaIngreso;
-	}
+    @ManyToOne
+    private Cabecera cabecera;
 
-	public void setFechaIngreso(Timestamp fechaIngreso) {
-		this.fechaIngreso = fechaIngreso;
-	}
+    public int getDetalleId() {
+        return detalleId;
+    }
 
-	public Timestamp getFechaSalida() {
-		return fechaSalida;
-	}
+    public void setDetalleId(int detalleId) {
+        this.detalleId = detalleId;
+    }
 
-	public void setFechaSalida(Timestamp fechaSalida) {
-		this.fechaSalida = fechaSalida;
-	}
+    public Timestamp getFechaIngreso() {
+        return fechaIngreso;
+    }
 
-	public double getCosto() {
-		return costo;
-	}
+    public void setFechaIngreso(Timestamp fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
 
-	public void setCosto(double costo) {
-		this.costo = costo;
-	}
+    public Timestamp getFechaSalida() {
+        return fechaSalida;
+    }
 
-	public Espacio getEspacio() {
-		return espacio;
-	}
+    public void setFechaSalida(Timestamp fechaSalida) {
+        this.fechaSalida = fechaSalida;
+    }
 
-	public void setEspacio(Espacio espacio) {
-		this.espacio = espacio;
-	}
+    public double getCosto() {
+        return costo;
+    }
 
-	public Cabecera getCabecera() {
-		return cabecera;
-	}
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
 
-	public void setCabecera(Cabecera cabecera) {
-		this.cabecera = cabecera;
-	}
-	
-	@Override
-	public String toString() {
-		return "DetalleFactura [codigo=" + detalleId + ", Ingreso=" + fechaIngreso + ", Salida=" + fechaSalida + ", Espacio="
-				+ espacio + "]";
-	}
+    public Vehiculo getVehiculo() {
+        return vehiculo;
+    }
+
+    public void setVehiculo(Vehiculo vehiculo) {
+        this.vehiculo = vehiculo;
+    }
+
+    public Espacio getEspacio() {
+        return espacio;
+    }
+
+    public void setEspacio(Espacio espacio) {
+        this.espacio = espacio;
+    }
+
+    public Cabecera getCabecera() {
+        return cabecera;
+    }
+
+    public void setCabecera(Cabecera cabecera) {
+        this.cabecera = cabecera;
+    }
+
+    @Override
+    public String toString() {
+        return "Detalle [detalleId=" + detalleId + ", fechaIngreso=" + fechaIngreso + ", fechaSalida=" + fechaSalida
+                + ", costo=" + costo + "]";
+    }
 }

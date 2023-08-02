@@ -45,8 +45,8 @@ public class GestionVehiculos {
 		return daoVehiculo.getAll();
 	}
 	
-	public void eliminarVehiculo(String vehiculoId) {
-		daoVehiculo.delete(vehiculoId);
+	public void eliminarVehiculo(String placa) {
+		daoVehiculo.delete(placa);
 	}
 	
 }

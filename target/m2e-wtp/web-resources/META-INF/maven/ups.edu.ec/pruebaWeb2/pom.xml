@@ -82,6 +82,11 @@
 
     <dependencyManagement>
         <dependencies>
+			 <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.12.5</version> <!-- Reemplaza con la versión más reciente de Jackson -->
+    </dependency>
             <!-- JBoss distributes a complete set of Jakarta EE 8 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or 
                 a collection) of artifacts. We use this here so that we always get the correct 

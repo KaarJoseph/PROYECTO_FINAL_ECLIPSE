@@ -28,13 +28,13 @@ public class VehiculoDao implements Serializable{
 		ve.merge(vehiculo);
 	}
 	
-	public Vehiculo read(String vehiculoId) {
-		Vehiculo v = ve.find(Vehiculo.class, vehiculoId);
+	public Vehiculo read(String placa) {
+		Vehiculo v = ve.find(Vehiculo.class, placa);
 		return v;
 	}
 	
-	public void delete(String vehiculoId) {
-		Vehiculo v = ve.find(Vehiculo.class, vehiculoId);
+	public void delete(String placa) {
+		Vehiculo v = ve.find(Vehiculo.class, placa);
 		ve.remove(v);
 	}
 	
@@ -48,13 +48,10 @@ public class VehiculoDao implements Serializable{
 	    List<Vehiculo> vehiculos = getAll();
 	    
 	    for (Vehiculo vehiculo : vehiculos) {
-	        System.out.println("vehiculoId: " + vehiculo.getVehiculoId());
 	        System.out.println("placa: " + vehiculo.getPlaca());
 	        System.out.println("marca: " + vehiculo.getMarca());
 	        System.out.println("modelo: " + vehiculo.getModelo());
 	        System.out.println("tipo: " + vehiculo.getTipo());
-	        //System.out.println("cedula: " + vehiculo.getPersona());
-
 	        System.out.println("-----------------------------");
 	    }
 	}
